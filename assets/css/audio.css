@@ -1,0 +1,78 @@
+/* custom css for the range (audio) */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+#music_range:hover {
+  opacity: 1;
+}
+
+#music_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+/* custom css for the range (volume) */
+/* and some other styles for it  */
+
+.music_review_container .music_section .icon-bar {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(28, 36, 29);
+  gap: 5px;
+  cursor: pointer;
+}
+.music_review_container .music_section .icon-bar li {
+  opacity: 0.8;
+}
+.music_review_container .music_section .icon-bar li:hover {
+  opacity: 1;
+}
+.music_review_container .music_section .icon-bar li #volume {
+  margin-left: 0;
+  transition: all 500ms ease-in-out;
+  width: 0px;
+}
+.music_section .icon-bar #volume_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music_review_container .music_section .icon-bar #volume_btn:hover #volume {
+  transition: all 500ms ease-in-out;
+  width: 60px;
+  /* max-width: 70%; */
+  margin-left: 5px;
+}
+
+.music_review_container
+  .music_section
+  .icon-bar
+  #volume_btn:hover
+  #volume::-webkit-slider-thumb {
+  opacity: 1;
+}
+.music_review_container .music_section .icon-bar #volume::-webkit-slider-thumb {
+  opacity: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}

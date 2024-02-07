@@ -1,0 +1,143 @@
+@import url("../css/audio.css");
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Thin Italic";
+  src: url("../../src/Roboto/Roboto-ThinItalic.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../src/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../src/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+}
+:root {
+  --main-color--: #fdfdfd;
+}
+body * {
+  font-family: "Roboto";
+  color: var(--main-color--);
+}
+#canvas {
+  display: block;
+}
+.music_review_container {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 1)
+    ),
+    url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg");
+  position: relative;
+  background-size: cover;
+  filter: blur(0px);
+}
+.music_review_container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(3px);
+  z-index: -1;
+}
+.music_review_container .song_poster {
+  background-image: url("../../src/music_posters/poster-arctic-monkeys.jpeg");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.728);
+}
+#singer,
+.btn {
+  font-family: "Roboto Bold";
+}
+#song_name {
+  font-family: "Dancing Script";
+  letter-spacing: 5px;
+}
+#ctrl_btn{
+  width: 180px;
+}
+#ctrl_btn i{
+  margin-right: 2px;
+}
+#ctrl_btn,
+#share_btn,
+#ctrl_btn #ctrl_text {
+  transition: all 500ms;
+}
+#ctrl_btn i,
+#share_btn i {
+  transition: all 400ms ease-in-out;
+}
+#ctrl_btn:hover,
+#share_btn:hover {
+  background-color: white;
+  color: black;
+}
+#ctrl_btn:hover #ctrl_text,
+#ctrl_btn:hover i,
+#share_btn:hover i 
+ {
+  color: black;
+}
+.my_text {
+  transform: rotate(-90deg); /* Adjust the rotation angle as needed */
+  transform-origin: bottom left; /* Adjust the rotation origin */
+  white-space: nowrap;
+}
+main .music_list_container {
+  padding-block: 10px;
+}
+main .music_list_container h2 {
+  font-family: "Roboto Bold";
+  margin-bottom: 2rem;
+}
+main .music_list_container h6 {
+  font-family: "Roboto Bold";
+  background: linear-gradient(45deg, green, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .music_list_container .song-singer {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main .music_list_container .track-list .music-info {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 10px;
+}
+main .music_list_container .track-list h4 {
+  min-width: 20px;
+}
+main .music_list_container .track-list .music_link {
+  display: block;
+}
+main .music_list_container .track-list .song-control1 {
+  flex-wrap: wrap;
+}
+header .music_review_container #song_name,
+header .music_review_container #singer {
+  background: url("../../src/glow-gif1.gif");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+header .music_review_container #singer {
+  background: url("../../src/glow-gif2.gif");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.track-list .music-info .ctrl_icon2 {
+  min-width: 1rem;
+}
